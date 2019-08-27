@@ -1,0 +1,19 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/02/Adder16.hdl
+
+/**
+ * Adds two 16-bit values.
+ * The most significant carry bit is ignored.
+ */
+
+CHIP AddSub16 {
+    IN a[16], b[16],contr;	//16-bit inputs
+    OUT s0[16];	//16 bit sum s0put and carry bits
+
+    PARTS:
+   // Put you code here:
+   NewXOR(a=b,b=contr,out=tmp);
+   GeneralAdd(a=a,b=tmp,cin=contr,s0=s0,c0=c);
+}

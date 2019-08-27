@@ -1,0 +1,26 @@
+CHIP Multiplier{
+	IN a[16],b[16];
+	OUT out1[16], out2[16];
+
+	PARTS:
+	NewAdd(a=a,b=b[0],out[0]=out1[0], tmp0=);
+	NewAdd(a=a,b=b[1],out=tmp1);
+	NewAdd(a=a,b=b[2],out=tmp2);
+	NewAdd(a=a,b=b[3],out=tmp3);
+	NewAdd(a=a,b=b[4],out=tmp4);
+	NewAdd(a=a,b=b[5],out=tmp5);
+	NewAdd(a=a,b=b[6],out=tmp6);
+	NewAdd(a=a,b=b[7],out=tmp7);
+	NewAdd(a=a,b=b[8],out=tmp8);
+	NewAdd(a=a,b=b[9],out=tmp9);
+	NewAdd(a=a,b=b[10],out=tmp10);
+	NewAdd(a=a,b=b[11],out=tmp11);
+	NewAdd(a=a,b=b[12],out=tmp12);
+	NewAdd(a=a,b=b[13],out=tmp13);
+	NewAdd(a=a,b=b[14],out=tmp14);
+	NewAdd(a=a,b=b[15],out=tmp15);
+
+	
+	GeneralAdd(a[0..15]=tmp0[0..15], b=false, s0[0]=tmps1[1..15]);
+	GeneralAdd(a[0..14]=tmp0[1..15], a[15]=false, b=tmp1, );
+}

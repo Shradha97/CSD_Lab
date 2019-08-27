@@ -1,0 +1,19 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/02/Adder16.hdl
+
+/**
+ * Adds two 32-bit values.
+ * The most significant carry bit is ignored.
+ */
+
+CHIP Add32 {
+    IN a1[16], a2[16], b1[16], b2[16];	//32-bit inputs
+    OUT s01[16], s02[16];	//sum and carry outputs
+
+    PARTS:
+   // Put you code here:
+	GeneralAdd(a=a1,b=b1,cin=false,s0=s01,c0=temp1);
+	GeneralAdd(a=a2,b=b2,cin=temp1,s0=s02,c0=c);
+}

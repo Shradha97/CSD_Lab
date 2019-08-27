@@ -1,0 +1,22 @@
+CHIP NewXOR{
+	IN a[16],cntr;
+	OUT out[16];
+
+	PARTS:
+	Xor(a=a[0],b=cntr,out=out[0]);
+	Xor(a=a[1],b=cntr,out=out[1]);
+	Xor(a=a[2],b=cntr,out=out[2]);
+	Xor(a=a[3],b=cntr,out=out[3]);
+	Xor(a=a[4],b=cntr,out=out[4]);
+	Xor(a=a[5],b=cntr,out=out[5]);
+	Xor(a=a[6],b=cntr,out=out[6]);
+	Xor(a=a[7],b=cntr,out=out[7]);
+	Xor(a=a[8],b=cntr,out=out[8]);
+	Xor(a=a[9],b=cntr,out=out[9]);
+	Xor(a=a[10],b=cntr,out=out[10]);
+	Xor(a=a[11],b=cntr,out=out[11]);
+	Xor(a=a[12],b=cntr,out=out[12]);
+	Xor(a=a[13],b=cntr,out=out[13]);
+	Xor(a=a[14],b=cntr,out=out[14]);
+	Xor(a=a[15],b=cntr,out=out[15]);
+}
