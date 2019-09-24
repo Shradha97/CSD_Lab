@@ -1,0 +1,10 @@
+CHIP RAM64K {
+    IN in[16], load, address[16];
+    OUT out[16];
+
+    PARTS:
+    DMux(in=load, sel=address[15], a=load1, b=load2);
+    RAM32K(in=in, address=address[0..14], out=test1, load=load1);
+    RAM32K(in=in, address=address[0..14], out=test2, load=load2);
+    Mux16(a=test1, b=test2, sel=address[15], out=out);
+}                                                             
