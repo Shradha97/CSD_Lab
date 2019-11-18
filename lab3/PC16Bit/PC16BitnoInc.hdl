@@ -1,0 +1,13 @@
+/**
+ * 16-bit PC with no increment
+ */
+
+CHIP PC16BitnoInc {
+    IN in1[16],in2[16],load,reset;
+    OUT out[16];
+
+    PARTS:
+    // Put your code here:
+    PC8BitnoInc(in1=in1[0..7],in2=in2[0..7],load=load,reset=reset,out=out[0..7]);
+    PC8BitnoInc(in1=in1[8..15],in2=in2[8..15],load=load,reset=reset,out=out[8..15]);
+}

@@ -1,0 +1,19 @@
+/**
+ * 8-bit PC with no increment
+ */
+
+CHIP PC8bitnoInc {
+    IN in1[8],in2[8],load,reset;
+    OUT out[8];
+
+    PARTS:
+    // Put your code here:
+    PC1bit(in1=in1[0],in2=in2[0],load=load,nreset=reset,out=out[0]);
+    PC1bit(in1=in1[1],in2=in2[1],load=load,nreset=reset,out=out[1]);
+    PC1bit(in1=in1[2],in2=in2[2],load=load,nreset=reset,out=out[2]);
+    PC1bit(in1=in1[3],in2=in2[3],load=load,nreset=reset,out=out[3]);
+    PC1bit(in1=in1[4],in2=in2[4],load=load,nreset=reset,out=out[4]);
+    PC1bit(in1=in1[5],in2=in2[5],load=load,nreset=reset,out=out[5]);
+    PC1bit(in1=in1[6],in2=in2[6],load=load,nreset=reset,out=out[6]);
+    PC1bit(in1=in1[7],in2=in2[7],load=load,nreset=reset,out=out[7]);
+}

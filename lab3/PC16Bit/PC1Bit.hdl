@@ -1,0 +1,19 @@
+  
+/**
+ * A 1-bit register with load and reset control bits.
+ * if      (reset == 1) out = 0
+ * else if (load == 1)   out = in1
+ * else                  out = in2
+ */
+
+CHIP PC1bit {
+    IN in1,in2,load,reset;
+    OUT out;
+
+    PARTS:
+    // Put your code here:
+    Mux(a=in1,b=in2,sel=load,out=muxout);
+    Not(a=reset,out=nreset);
+    And(a=nreset,b=muxout,out=in);
+    DFF(in=in,out=out);
+}
